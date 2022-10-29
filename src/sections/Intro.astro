@@ -1,1 +1,86 @@
-<div>Intro</div>
+---
+const people = [
+  {
+    name: "John Smith",
+    image: "https://picsum.photos/id/1/200",
+  },
+  {
+    name: "Jane Surname",
+    image: "https://picsum.photos/id/1/200",
+  },
+  {
+    name: "Lorem Ipsum",
+    image: "https://picsum.photos/id/1/200",
+  },
+];
+---
+
+<style>
+  .wrapper {
+    background: #ddd;
+  }
+
+  .content {
+    margin: 0 auto;
+    max-width: 80rem;
+    display: flex;
+  }
+
+  .column-left {
+    width: 50%;
+  }
+
+  .column-right {
+    width: 50%;
+    background: grey;
+  }
+
+  p {
+    max-width: 20rem;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding: 1rem;
+  }
+
+  img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+</style>
+
+<div class="wrapper">
+  <div class="content">
+    <div class="column-left">
+      <h2>What is FEDSA?</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum ipsam
+        libero sed mollitia odio vero, recusandae maxime? Vero aspernatur
+        voluptas omnis, qui facilis aperiam, cumque sit aliquid, voluptatem
+        earum corporis.
+      </p>
+
+      <ul>
+        {
+          people.map(({ image, name }) => (
+            <li>
+              <img src={image} />
+              <p>{name}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="column-right">...</div>
+  </div>
+</div>

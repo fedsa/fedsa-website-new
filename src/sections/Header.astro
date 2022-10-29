@@ -39,13 +39,17 @@ const links = [
   }
 
   .wrapper {
-    background: yellow;
+    background: grey;
+  }
+
+  .content {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background: grey;
     color: white;
     align-items: center;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 
   .logo {
@@ -55,17 +59,19 @@ const links = [
 </style>
 
 <div class="wrapper">
-  <div class="logo">Logo</div>
+  <div class="content">
+    <div class="logo">Logo</div>
 
-  <nav>
-    <ul>
-      {
-        links.map(({ label }) => (
-          <li>
-            <a href="#">{label}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        {
+          links.map(({ label }) => (
+            <li>
+              <a href="#">{label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
 </div>
