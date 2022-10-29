@@ -1,58 +1,43 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Button from '../components/atoms/Button/Button.jsx';
+import Header from "../sections/Header.astro";
+import Intro from "../sections/Intro.astro";
+import Meetup from "../sections/Meetup.astro";
+import Youtube from "../sections/Youtube.astro";
+import Partners from "../sections/Partners.astro";
+import Contact from "../sections/Contact.astro";
+import Footer from "../sections/Footer.astro";
 ---
 
-<Layout title="Welcome to FEDSA.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">FEDSA</span></h1>
-		<p class="instructions">
-			Let's go!!!
-		</p>
-		<Button>Click me</Button>
-	</main>
-</Layout>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FEDSA</title>
+  </head>
+  <body>
+    <header><Header /></header>
+    <a>asdsa</a>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+    <main>
+      <section><Intro /></section>
+      <section><Meetup /></section>
+      <section><Youtube /></section>
+      <section><Partners /></section>
+      <section><Contact /></section>
+    </main>
+
+    <footer><Footer /></footer>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </body>
+</html>
