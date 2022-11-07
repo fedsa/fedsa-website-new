@@ -1,0 +1,77 @@
+---
+const links = [
+  {
+    href: "#",
+    label: "About us",
+  },
+  {
+    href: "#",
+    label: "Meetup",
+  },
+  {
+    href: "#",
+    label: "Youtube",
+  },
+  {
+    href: "#",
+    label: "Partners",
+  },
+  {
+    href: "#",
+    label: "Connect with us",
+  },
+];
+---
+
+<style>
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+  }
+
+  .wrapper {
+    background: grey;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: white;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+
+  .logo {
+    background: black;
+    padding: 1rem;
+  }
+</style>
+
+<div class="wrapper">
+  <div class="content">
+    <div class="logo">Logo</div>
+
+    <nav>
+      <ul>
+        {
+          links.map(({ label }) => (
+            <li>
+              <a href="#">{label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</div>
